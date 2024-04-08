@@ -9,11 +9,11 @@ U sklopu zadaće potrebn je napraviti:
   
 Zadaću predati kao video gibanja robota.
 
-Preuzeti repozitorij kao .zip i unzip napraviti u novi folder, ili folder ~/rsp_ws
-
-Napraviti naredbe:
+Naredbe za preuzimanje repozitorija i pokretanje:
 ```
-cd ~/rsp_ws
+mkdir ~/zadaca6_ws
+cd ~/zadaca6_ws
+git clone -b Zadaca6 --single-branch https://github.com/Zredy/AUSUVjezbe.git .
 colcon build
 source install/setup.bash
 ros2 launch rsp_tutorial iiwa14.launch.py
