@@ -18,3 +18,4 @@ colcon build
 source install/setup.bash
 ros2 launch rsp_tutorial iiwa14.launch.py
 ```
+Nakon pokretanja rviz-a, otvoriti u rviz datoteku r2d2.rviz koja se nalazi u urdf folderu, nakon ovoga model robota bi se trebao pokazati.
