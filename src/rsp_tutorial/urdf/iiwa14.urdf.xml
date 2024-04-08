@@ -1,0 +1,129 @@
+<robot name="iiwa14">
+
+    <link name="link_0">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_0.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="link_1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_1.dae"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 -0.15"/>
+        </visual>
+    </link>
+
+    <joint name="joint_01" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 0 0" xyz="0 0 0.15"/>
+        <parent link="link_0"/>
+        <child link="link_1"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+
+    <link name="link_2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_2.dae"/>
+            </geometry>
+            <origin rpy="-1.57 3.14 3.14" xyz="0 0.36 0"/>
+        </visual>
+    </link>
+
+    <joint name="joint_12" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="-1.57 0 0" xyz="0 0 0.21"/>
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+
+    <link name="link_3">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_3.dae"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 -0.59"/>
+        </visual>
+    </link>
+
+    <joint name="joint_23" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="1.57 0 0" xyz="0 -0.229 0"/>
+        <parent link="link_2"/>
+        <child link="link_3"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+
+    <link name="link_4">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_4.dae"/>
+            </geometry>
+            <origin rpy="-1.57 0 0" xyz="0 -0.78 0"/>
+        </visual>
+    </link>
+
+    <joint name="joint_34" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="1.57 0 0" xyz="0 0.001 0.191"/>
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+
+    <link name="link_5">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_5.dae"/>
+            </geometry>
+            <origin xyz="0 0 -0.999"/>
+        </visual>
+    </link>
+
+    <joint name="joint_45" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="-1.57 0 0" xyz="0 0.218 0.001"/>
+        <parent link="link_4"/>
+        <child link="link_5"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+
+    <link name="link_6">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_6.dae"/>
+            </geometry>
+            <origin rpy="1.57 0 0" xyz="0 1.18 0"/>
+        </visual>
+    </link>
+
+    <joint name="joint_56" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="-1.57 0 0" xyz="0 0 0.18"/>
+        <parent link="link_5"/>
+        <child link="link_6"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+
+    <link name="link_7">
+        <visual>
+            <geometry>
+                <mesh filename="package://rsp_tutorial/link_7.dae"/>
+            </geometry>
+            <origin xyz="0 0 -1.27"/>
+        </visual>
+    </link>
+
+    <joint name="joint_67" type="revolute">
+        <axis xyz="0 0 1"/>
+        <origin rpy="1.57 0 0" xyz="0 -0.09 0"/>
+        <parent link="link_6"/>
+        <child link="link_7"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+    </joint>
+</robot>
